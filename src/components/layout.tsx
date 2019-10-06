@@ -1,16 +1,12 @@
-import React from "react"
 import { Link } from "gatsby"
+import * as React from "react"
 
 import { rhythm, scale } from "../utils/typography"
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
+const Layout = ({ location, title, children }: LayoutProps): JSX.Element => {
     const rootPath = `${__PATH_PREFIX__}/`
-    let header
-
-    if (location.pathname === rootPath) {
-      header = (
+    const header = location.pathname === rootPath
+      ? (
         <h1
           style={{
             ...scale(1.5),
@@ -30,8 +26,7 @@ class Layout extends React.Component {
           </Link>
         </h1>
       )
-    } else {
-      header = (
+    : (
         <h3
           style={{
             fontFamily: `Montserrat, sans-serif`,
@@ -49,8 +44,8 @@ class Layout extends React.Component {
             {title}
           </Link>
         </h3>
-      )
-    }
+    )
+
     return (
       <div
         style={{
@@ -69,7 +64,13 @@ class Layout extends React.Component {
         </footer>
       </div>
     )
-  }
+}
+
+interface LayoutProps {
+  /* tslint:disable-next-line:no-any */
+  children: any,
+  location: Location,
+  title: string
 }
 
 export default Layout
