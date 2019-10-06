@@ -1,11 +1,11 @@
 import { graphql, useStaticQuery } from "gatsby"
 import * as React from "react"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 
 const SEO = ({ description, lang, meta, title }: SEOProps): JSX.Element => {
   const { site } = useStaticQuery(
     graphql`
-      query {
+      query SeoQuery {
         site {
           siteMetadata {
             title

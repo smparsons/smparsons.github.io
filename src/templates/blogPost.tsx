@@ -1,21 +1,23 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import * as React from "react"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import { BlogPostBySlug } from "./queryTypes/BlogPostBySlug"
 
 const BlogPostTemplate = ({ data, location, pageContext }: BlogPostTemplateProps): JSX.Element => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
+  const post = data.markdownRemark!
+  const { title, date, description } = post.frontmatter!
+  const siteTitle = data.site!.siteMetadata!.title!
   const { previous, next } = pageContext
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        title={title!}
+        description={description || post.excerpt || undefined}
       />
       <article>
         <header>
@@ -25,7 +27,7 @@ const BlogPostTemplate = ({ data, location, pageContext }: BlogPostTemplateProps
               marginBottom: 0,
             }}
           >
-            {post.frontmatter.title}
+            {title!}
           </h1>
           <p
             style={{
@@ -34,10 +36,10 @@ const BlogPostTemplate = ({ data, location, pageContext }: BlogPostTemplateProps
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date}
+            {date!}
           </p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section dangerouslySetInnerHTML={{ __html: post.html! }} />
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -79,18 +81,14 @@ const BlogPostTemplate = ({ data, location, pageContext }: BlogPostTemplateProps
 }
 
 interface BlogPostTemplateProps {
-  data: {
-    /* tslint:disable-next-line:no-any */
-    markdownRemark: any,
-    site: {
-      siteMetadata: {
-        title: string
-      }
-    }
-  },
+  data: BlogPostBySlug,
   location: Location,
-  /* tslint:disable-next-line:no-any */
-  pageContext: any
+  pageContext: {
+    /* tslint:disable-next-line:no-any */
+    previous: any,
+    /* tslint:disable-next-line:no-any */
+    next: any
+  }
 }
 
 export default BlogPostTemplate

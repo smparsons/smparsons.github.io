@@ -1,0 +1,1 @@
+declare let __PATH_PREFIX__: string

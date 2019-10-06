@@ -75,5 +75,9 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: "gatsby-plugin-codegen",
+      options: { output: "queryTypes" }
+    }
   ],
 }

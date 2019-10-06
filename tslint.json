@@ -19,6 +19,7 @@
     "no-var-keyword": true,
     "object-literal-sort-keys": false,
     "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
     "quotemark": false,
     "semicolon": false,
     "trailing-comma": false,
