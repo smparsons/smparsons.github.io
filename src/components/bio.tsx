@@ -2,7 +2,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import Image, { FixedObject } from "gatsby-image"
 import * as React from "react"
 
-import { rhythm } from "../utils/typography"
 import { BioQuery } from "./queryTypes/BioQuery"
 
 const Bio = (): JSX.Element => {
@@ -29,24 +28,11 @@ const Bio = (): JSX.Element => {
   const { author, social } = data.site!.siteMetadata!
 
   return (
-    <div
-      style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
-      }}
-    >
+    <div className="biography">
       <Image
         fixed={data.avatar!.childImageSharp!.fixed! as FixedObject}
         alt={author!}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
+        imgStyle={{ borderRadius: `50%` }}
       />
       <p>
         Written by <strong>{author!}</strong> who lives and works in San

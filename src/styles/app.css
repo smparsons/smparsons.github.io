@@ -1,0 +1,87 @@
+.layout-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 32px;
+    padding: 16px;
+    width: 50%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1000px) {
+    .layout-wrapper { width: 90%; }
+}
+@media screen and (max-width: 425px) {
+    .layout-wrapper { width: 95% }
+}
+
+.layout-wrapper h1 {
+    font-size: 64px;
+    margin: 16px 0;
+}
+
+.layout-wrapper h3 {
+    font-size: 24px;
+    margin: 16px 0;
+    font-family: Montserrat, sans-serif;
+}
+
+.header-link {
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.biography {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 16px;
+    justify-content: start;
+}
+
+.index-content {
+    display: grid;
+    gap: 16px;
+}
+
+.blog-post-listing {
+    display: grid;
+    gap: 8px;
+}
+
+.blog-post-listing h3 {
+    margin: 0;
+}
+
+.blog-post-listing a {
+    box-shadow: none;
+}
+
+.blog-post-content {
+    display: grid;
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.blog-post-content h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+.blog-post-content hr {
+    margin: 0;
+}
+
+.blog-post-content p:last-child {
+    margin-bottom: 0;
+}
+
+.blog-post-content ul,ol {
+    list-style-position: inside;
+}
+
+.blog-post-navigator {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}

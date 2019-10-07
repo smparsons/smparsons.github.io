@@ -7,7 +7,6 @@ import { NotFoundQuery } from "./queryTypes/NotFoundQuery"
 
 const NotFoundPage = ({ data, location }: NotFoundPageProps): JSX.Element => {
   const title = data.site!.siteMetadata!.title!
-
   return (
     <Layout location={location} title={title}>
       <SEO title="404: Not Found" />

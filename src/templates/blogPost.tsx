@@ -4,7 +4,6 @@ import * as React from "react"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
 import { BlogPostBySlug } from "./queryTypes/BlogPostBySlug"
 
 const BlogPostTemplate = ({ data, location, pageContext }: BlogPostTemplateProps): JSX.Element => {
@@ -19,47 +18,17 @@ const BlogPostTemplate = ({ data, location, pageContext }: BlogPostTemplateProps
         title={title!}
         description={description || post.excerpt || undefined}
       />
-      <article>
+      <article className="blog-post-content">
         <header>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
-            {title!}
-          </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
-            {date!}
-          </p>
+          <h1>{title!}</h1>
+          <small>{date!}</small>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html! }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <footer>
-          <Bio />
-        </footer>
+        <hr />
+        <footer><Bio /></footer>
       </article>
-
       <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <ul className="blog-post-navigator">
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">

@@ -1,61 +1,16 @@
 import { Link } from "gatsby"
 import * as React from "react"
 
-import { rhythm, scale } from "../utils/typography"
-
 const Layout = ({ location, title, children }: LayoutProps): JSX.Element => {
     const rootPath = `${__PATH_PREFIX__}/`
-    const header = location.pathname === rootPath
-      ? (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    : (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-    )
+    const link = <Link className="header-link" to={`/`}>{title}</Link>
+    const heading = location.pathname === rootPath
+      ? <h1>{link}</h1>
+      : <h3>{link}</h3>
 
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
+      <div className="layout-wrapper">
+        <header>{heading}</header>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with

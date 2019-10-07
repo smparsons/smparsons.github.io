@@ -76,8 +76,8 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-codegen",
-      options: { output: "queryTypes" }
+      resolve: `gatsby-plugin-codegen`,
+      options: { output: `queryTypes` }
     }
   ],
 }
