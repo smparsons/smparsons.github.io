@@ -1,3 +1,17 @@
+body {
+    background: #121212;
+    color: #FFFFFF;
+}
+
+a { color: #FF7597; }
+li p { display: inline; }
+hr { background: #D3D3D3; }
+
+blockquote {
+    color: #D3D3D3;
+    border-left-color: #FFFFFF;
+}
+
 .layout-wrapper {
     display: grid;
     grid-template-rows: auto 1fr;
