@@ -43,6 +43,7 @@
     "@types/react-dom": "^16.9.1",
     "@types/react-helmet": "^5.0.11",
     "@types/typography": "^0.16.3",
+    "gh-pages": "^2.1.1",
     "prettier": "^1.18.2",
     "tslint": "^5.20.0",
     "tslint-loader": "^3.5.4",
@@ -66,6 +67,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve --port 9001",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public -b master"
   }
 }
