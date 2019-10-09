@@ -13,9 +13,7 @@ const Layout = ({ location, title, children }: LayoutProps): JSX.Element => {
         <header>{heading}</header>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()}, Samuel Parsons
         </footer>
       </div>
     )

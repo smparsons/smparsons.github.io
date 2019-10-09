@@ -7,7 +7,7 @@ import { BioQuery } from "./queryTypes/BioQuery"
 const Bio = (): JSX.Element => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/profile-pic.jpeg/" }) {
         childImageSharp {
           fixed(width: 50, height: 50) {
             ...GatsbyImageSharpFixed
@@ -17,15 +17,15 @@ const Bio = (): JSX.Element => {
       site {
         siteMetadata {
           author
-          social {
-            twitter
+          github {
+            username
           }
         }
       }
     }
   `) as BioQuery
 
-  const { author, social } = data.site!.siteMetadata!
+  const { author, github } = data.site!.siteMetadata!
 
   return (
     <div className="biography">
@@ -35,11 +35,12 @@ const Bio = (): JSX.Element => {
         imgStyle={{ borderRadius: `50%` }}
       />
       <p>
-        Written by <strong>{author!}</strong> who lives and works in San
-        Francisco building useful things.
+        My name is <strong>{author!}</strong>. I have a strong passion for
+        software development, and love building clean solutions to complex
+        business problems. I currently work as a web developer in New Albany, OH.
         {` `}
-        <a href={`https://twitter.com/${social!.twitter}`}>
-          You should follow him on Twitter
+        <a href={`https://github.com/${github!.username}`}>
+          Check out my GitHub page!
         </a>
       </p>
     </div>

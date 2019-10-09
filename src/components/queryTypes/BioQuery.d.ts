@@ -25,15 +25,15 @@ export interface BioQuery_avatar {
   childImageSharp: BioQuery_avatar_childImageSharp | null;
 }
 
-export interface BioQuery_site_siteMetadata_social {
-  __typename: "SiteSiteMetadataSocial";
-  twitter: string | null;
+export interface BioQuery_site_siteMetadata_github {
+  __typename: "SiteSiteMetadataGithub";
+  username: string | null;
 }
 
 export interface BioQuery_site_siteMetadata {
   __typename: "SiteSiteMetadata";
   author: string | null;
-  social: BioQuery_site_siteMetadata_social | null;
+  github: BioQuery_site_siteMetadata_github | null;
 }
 
 export interface BioQuery_site {

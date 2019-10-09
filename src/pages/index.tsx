@@ -36,7 +36,10 @@ const BlogIndex = ({ data, location }: BlogIndexProps): JSX.Element => {
       <SEO title="All posts" />
       <div className="index-content">
         <Bio />
-        {posts.map(asBlogPostListing)}
+        {posts.length
+          ? posts.map(asBlogPostListing)
+          : <div>At the moment, I do not have any blog posts. Please come back soon!</div>
+        }
       </div>
     </Layout>
   )

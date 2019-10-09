@@ -34,22 +34,6 @@ const SEO = ({ description, lang, meta, title }: SEOProps): JSX.Element => {
     {
       property: `og:type`,
       content: `website`,
-    },
-    {
-      name: `twitter:card`,
-      content: `summary`,
-    },
-    {
-      name: `twitter:creator`,
-      content: site.siteMetadata.author,
-    },
-    {
-      name: `twitter:title`,
-      content: title,
-    },
-    {
-      name: `twitter:description`,
-      content: metaDescription,
     }
   ]
   const metaTags = meta ? [...defaultMetaTags, ...meta ] : defaultMetaTags
