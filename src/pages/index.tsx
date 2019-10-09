@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import { BlogIndexQuery, BlogIndexQuery_allMarkdownRemark_edges } from "./queryTypes/BlogIndexQuery"
 
 const asBlogPostListing = ({ node }: BlogIndexQuery_allMarkdownRemark_edges): JSX.Element => {
-  const { title, date } = node.frontmatter!
+  const { title, date, description } = node.frontmatter!
   const slug = node.fields!.slug!
   return (
     <article key={slug} className="blog-post-listing">
@@ -20,7 +20,7 @@ const asBlogPostListing = ({ node }: BlogIndexQuery_allMarkdownRemark_edges): JS
       <section>
         <p
           dangerouslySetInnerHTML={{
-            __html: node.frontmatter!.description || node.excerpt!,
+            __html: description || node.excerpt!,
           }}
         />
       </section>
@@ -36,10 +36,7 @@ const BlogIndex = ({ data, location }: BlogIndexProps): JSX.Element => {
       <SEO title="All posts" />
       <div className="index-content">
         <Bio />
-        {posts.length
-          ? posts.map(asBlogPostListing)
-          : <div>At the moment, I do not have any blog posts. Please come back soon!</div>
-        }
+        {posts.map(asBlogPostListing)}
       </div>
     </Layout>
   )
