@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Sam The Coder`,
+    title: `Sam the Coder`,
     author: `Samuel Parsons`,
     description: `Sam's blog covering a variety of different software development topics.`,
     siteUrl: `https://www.samthecoder.com`,
@@ -30,7 +30,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 590
             },
           },
           {
@@ -62,8 +62,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        display: `minimal-ui`
       },
     },
     `gatsby-plugin-offline`,
