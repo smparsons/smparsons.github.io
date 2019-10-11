@@ -108,7 +108,7 @@ blockquote {
 .external-site-links {
     display: grid;
     grid-auto-flow: column;
-    gap: 8px
+    gap: 8px;
 }
 
 .external-site-links a {
