@@ -17,15 +17,12 @@ const Bio = (): JSX.Element => {
       site {
         siteMetadata {
           author
-          github {
-            username
-          }
         }
       }
     }
   `) as BioQuery
 
-  const { author, github } = data.site!.siteMetadata!
+  const { author } = data.site!.siteMetadata!
 
   return (
     <div className="biography">
@@ -38,10 +35,6 @@ const Bio = (): JSX.Element => {
         My name is <strong>{author!}</strong>. I have a strong passion for
         software development, and love building clean solutions to complex
         business problems. I currently work as a web developer in New Albany, OH.
-        {` `}
-        <a href={`https://github.com/${github!.username}`}>
-          Check out my GitHub page!
-        </a>
       </p>
     </div>
   )

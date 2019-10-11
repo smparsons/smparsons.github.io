@@ -99,3 +99,24 @@ blockquote {
     list-style: none;
     padding: 0;
 }
+
+.site-footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.external-site-links {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 8px
+}
+
+.external-site-links a {
+    box-shadow: none;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.external-site-links a:hover {
+    opacity: 0.75;
+}

@@ -4,9 +4,8 @@ module.exports = {
     author: `Samuel Parsons`,
     description: `Sam's blog covering a variety of different software development topics.`,
     siteUrl: `https://www.samthecoder.com`,
-    github: {
-      username: `smparsons`
-    }
+    githubProfile: `https://github.com/smparsons`,
+    linkedinProfile: `https://www.linkedin.com/in/parsonssamuel/`
   },
   plugins: [
     {
