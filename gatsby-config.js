@@ -56,17 +56,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-feed`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`
-      },
-    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
