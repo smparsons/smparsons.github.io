@@ -68,12 +68,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-codegen`,
       options: { output: `queryTypes` }
-    },
-    {
-      resolve: `gatsby-plugin-google-adsense`,
-      options: {
-        publisherId: `ca-pub-3158663397049075`
-      },
     }
   ],
 }
