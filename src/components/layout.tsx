@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import * as React from "react"
 
 import ExternalSiteLinks from "./externalSiteLinks"
+import GoogleAnalytics from "./googleAnalytics"
 
 const Layout = ({ location, title, children }: LayoutProps): JSX.Element => {
     const rootPath = `${__PATH_PREFIX__}/`
@@ -12,6 +13,7 @@ const Layout = ({ location, title, children }: LayoutProps): JSX.Element => {
 
     return (
       <div className="layout-wrapper">
+        <GoogleAnalytics />
         <header>{heading}</header>
         <main>{children}</main>
         <footer className="site-footer">
