@@ -2,6 +2,7 @@ import { graphql, Link } from "gatsby"
 import * as React from "react"
 
 import Bio from "../components/bio"
+import CommentsSection from "../components/commentsSection"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { BlogPostBySlug } from "./queryTypes/BlogPostBySlug"
@@ -26,25 +27,29 @@ const BlogPostTemplate = ({ data, location, pageContext }: BlogPostTemplateProps
         <section dangerouslySetInnerHTML={{ __html: post.html! }} />
         <hr />
         <footer><Bio /></footer>
+        <CommentsSection />
+        <hr />
       </article>
-      <nav>
-        <ul className="blog-post-navigator">
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+      {(previous || next) && (
+        <nav>
+          <ul className="blog-post-navigator">
+            <li>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </nav>
+      )}
     </Layout>
   )
 }

@@ -5,7 +5,10 @@ body {
 
 a { color: #BB86FC; }
 li p { display: inline; }
-hr { background: #D3D3D3; }
+hr { 
+    background: #D3D3D3; 
+    opacity: 0.5; 
+}
 
 blockquote {
     color: #D3D3D3;
@@ -72,7 +75,7 @@ blockquote {
 .blog-post-content {
     display: grid;
     gap: 32px;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
 }
 
 .blog-post-content h1 {
