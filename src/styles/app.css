@@ -3,11 +3,19 @@ body {
     color: #FFFFFF;
 }
 
-a { color: #BB86FC; }
+a { color: #66d9ef; }
 li p { display: inline; }
 hr { 
     background: #D3D3D3; 
     opacity: 0.5; 
+}
+
+.gatsby-highlight {
+    margin-bottom: 1.75rem;
+}
+.gatsby-highlight span.comment {
+    white-space: pre-wrap;
+    word-break: break-all
 }
 
 blockquote {
@@ -17,7 +25,6 @@ blockquote {
 
 .layout-wrapper {
     display: grid;
-    grid-template-rows: auto 1fr;
     gap: 32px;
     padding: 16px;
     width: 50%;
