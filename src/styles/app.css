@@ -13,10 +13,6 @@ hr {
 .gatsby-highlight {
     margin-bottom: 1.75rem;
 }
-.gatsby-highlight span.comment {
-    white-space: pre-wrap;
-    word-break: break-all;
-}
 
 blockquote {
     color: #D3D3D3;
@@ -83,6 +79,10 @@ blockquote {
     display: grid;
     gap: 32px;
     margin-bottom: 32px;
+}
+
+.blog-post-content section {
+    min-width: 0;
 }
 
 .blog-post-content h1 {
