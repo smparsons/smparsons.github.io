@@ -21,7 +21,7 @@ Unlike inline elements, block elements can have a width and height set. Vertical
 
 ## Inline-Block
 
-As you may have guessed, inline-block elements have characteristics of both inline and block elements. Similar to inline elements, inline-block elements can render adjacent to other inline elements or text. However, they cannot break among multiple lines. Examples of elements that display as inline-block elements by default would be `button`, `input`, or `select` elements.
+As you may have guessed, inline-block elements have characteristics of both inline and block elements. Similar to inline elements, inline-block elements can render adjacent to other inline elements or text. However, they cannot break among multiple lines. Examples of elements that display as inline-block elements by default would be *button*, *input*, or *select* elements.
 
 Inline-Block elements respect width and height, as well as vertical margin and padding.
 
