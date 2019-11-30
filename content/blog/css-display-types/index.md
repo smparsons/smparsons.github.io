@@ -5,7 +5,7 @@ description: ""
 
 ---
 
-The CSS display property controls how an element is rendered on the screen. Three commonly used display types are: `inline`, `block`, and `inline-block`. I've used these three display types multiple times, but I've never really taken the time to fully understand how they work and their differences in behavior. With today's blog post, I just wanted to briefly highlight the key differences in these display types, with an example at the bottom. If you're like me and you're ignorant about basic CSS concepts, then hopefully this blog post will help clear up any confusion you may have.
+The CSS display property controls how an element is rendered on the screen. Three commonly used display types are: inline, block, and inline-block. I've used these three display types multiple times, but I've never really taken the time to fully understand how they work and their differences in behavior. With today's blog post, I just wanted to briefly highlight the key differences in these display types, with an example at the bottom. If you're like me and you're ignorant about basic CSS concepts, then hopefully this blog post will help clear up any confusion you may have.
 
 ## Inline
 
